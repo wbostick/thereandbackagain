@@ -16,6 +16,7 @@ public class HitscanEnemyController : MonoBehaviour
 
     void Start()
     {
+        target = GameManager.instance.Player.transform; 
     }
 
     void Update()
