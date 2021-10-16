@@ -8,8 +8,8 @@ public class Gun : MonoBehaviour
 {
     public float fireCooldown = 1.0f;
     float startTime;
-    [SerializeField] float damage;
-    [SerializeField] bool isPlayer;
+    public float damage;
+    public bool isPlayer;
     public Transform muzzleTransorm;
     public GameObject HitEffectParticle;
     public UnityEvent OnShoot;

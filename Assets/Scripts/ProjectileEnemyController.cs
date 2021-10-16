@@ -24,8 +24,8 @@ public class ProjectileEnemyController : MonoBehaviour
     private bool scared { 
         get {return _scared;}
         set {
-            if (_scared && !value) {OnScare.Invoke();}
-            if (!_scared && value) {OnEndScare.Invoke();}
+            if (!_scared && value) {OnScare.Invoke();}
+            if (_scared && !value) {OnEndScare.Invoke();}
             _scared = value;
         }
     }
