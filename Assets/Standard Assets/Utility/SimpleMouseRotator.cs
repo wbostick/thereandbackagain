@@ -70,7 +70,7 @@ namespace UnityStandardAssets.Utility
                     m_FollowAngles.x += 360;
                 }
 
-#if MOBILE_INPUT
+/*#if MOBILE_INPUT
             // on mobile, sometimes we want input mapped directly to tilt value,
             // so it springs back automatically when the look input is released.
 			if (autoZeroHorizontalOnMobile) {
@@ -83,11 +83,11 @@ namespace UnityStandardAssets.Utility
 			} else {
 				m_TargetAngles.x += inputV * rotationSpeed;
 			}
-#else
+#else*/
                 // with mouse input, we have direct control with no springback required.
                 m_TargetAngles.y += inputH*rotationSpeed;
                 m_TargetAngles.x += inputV*rotationSpeed;
-#endif
+//#endif
 
                 // clamp values to allowed range
                 m_TargetAngles.y = Mathf.Clamp(m_TargetAngles.y, -rotationRange.y*0.5f, rotationRange.y*0.5f);
