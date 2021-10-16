@@ -443,6 +443,11 @@ PrefabInstance:
       propertyPath: fireCooldown
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2810343699511656006, guid: 7d32deacb6b698f45ad56c9b0c5f16e3,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6492799826372498115, guid: 7d32deacb6b698f45ad56c9b0c5f16e3,
         type: 3}
       propertyPath: m_Name
@@ -456,7 +461,7 @@ PrefabInstance:
     - target: {fileID: 7268095195897150012, guid: 7d32deacb6b698f45ad56c9b0c5f16e3,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.008
+      value: 0.567
       objectReference: {fileID: 0}
     - target: {fileID: 7268095195897150012, guid: 7d32deacb6b698f45ad56c9b0c5f16e3,
         type: 3}
@@ -501,6 +506,11 @@ PrefabInstance:
     - target: {fileID: 7268095195897150012, guid: 7d32deacb6b698f45ad56c9b0c5f16e3,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7721364707081389533, guid: 7d32deacb6b698f45ad56c9b0c5f16e3,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
