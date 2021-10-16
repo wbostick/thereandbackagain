@@ -7,7 +7,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8175163815513201413}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f2ec2b96de5640e42a622fc3064f1c80, type: 3}
   m_Name: 
@@ -34,6 +34,7 @@ GameObject:
   - component: {fileID: 8491741577803341294}
   - component: {fileID: 7367217542433430362}
   - component: {fileID: 7446158523474053339}
+  - component: {fileID: 7516334391667308763}
   m_Layer: 0
   m_Name: HitscanEnemy
   m_TagString: Enemy
@@ -154,7 +155,7 @@ NavMeshAgent:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8843715398980125347}
-  m_Enabled: 1
+  m_Enabled: 0
   m_AgentTypeID: 0
   m_Radius: 0.5
   m_Speed: 3.5
@@ -201,7 +202,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8843715398980125347}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f2ec2b96de5640e42a622fc3064f1c80, type: 3}
   m_Name: 
@@ -211,6 +212,70 @@ MonoBehaviour:
   m_UpdateType: 0
   m_RotationRange: {x: 0, y: 360}
   m_FollowSpeed: 1
+--- !u!114 &7516334391667308763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8843715398980125347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea6b4527de373bd49a54785a914369ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  visionConeAngle: 180
+  OnAggro:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7446158523474053339}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 9058369025471394481}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 904479333204816617}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 3124510288394972281}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1001 &3129732530675911110
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -221,6 +286,11 @@ PrefabInstance:
     - target: {fileID: 14485696735208895, guid: 7d32deacb6b698f45ad56c9b0c5f16e3,
         type: 3}
       propertyPath: isPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 14485696735208895, guid: 7d32deacb6b698f45ad56c9b0c5f16e3,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 14485696735208895, guid: 7d32deacb6b698f45ad56c9b0c5f16e3,
@@ -302,3 +372,15 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 3129732530675911110}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3124510288394972281 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 14485696735208895, guid: 7d32deacb6b698f45ad56c9b0c5f16e3,
+    type: 3}
+  m_PrefabInstance: {fileID: 3129732530675911110}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8175163815513201413}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 825390aaf5525d1448aa41581f03ad21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
