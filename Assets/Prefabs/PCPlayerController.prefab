@@ -134,21 +134,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6560385835203110634, guid: a9e0d0653565a8b4d90c5f56e840b093,
-        type: 3}
-      propertyPath: OnShoot.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6560385835203110634, guid: a9e0d0653565a8b4d90c5f56e840b093,
-        type: 3}
-      propertyPath: OnShoot.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6560385835203110634, guid: a9e0d0653565a8b4d90c5f56e840b093,
-        type: 3}
-      propertyPath: OnShoot.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 7268095195897150012, guid: a9e0d0653565a8b4d90c5f56e840b093,
         type: 3}
       propertyPath: m_RootOrder

@@ -105,6 +105,8 @@ public class GrapplingHook : MonoBehaviour
  
             yield return null;
         }
-        
+
+        GameManager.instance.EnablePlayerMovement();
+        StopCoroutine("MovePlayerAlongCurve");
     }
 }

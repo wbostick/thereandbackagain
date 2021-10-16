@@ -6,7 +6,13 @@ public class LoopSystem : MonoBehaviour
 {
     public static LoopSystem instance;
     List<Transform> EnemySpawnLocations = new List<Transform>();
-    [SerializeField] GameObject EnemyPrefab;
+
+    [System.Serializable]
+    public class EnemySpawn {
+        public GameObject Enemy;
+        public int spawnChance;
+    }
+    [SerializeField] List<EnemySpawn> EnemySpawns = new List<EnemySpawn>();
     [SerializeField] GameObject TargetEnemyPrefab;
     List<GameObject> SpawnedEnemies = new List<GameObject>();
 
@@ -41,12 +47,24 @@ public class LoopSystem : MonoBehaviour
 
         int targetEnemyIndex = Random.Range(0, EnemySpawnLocations.Count);
         for (int i = 0; i < EnemySpawnLocations.Count; i++) {
-            GameObject spawnedEnemy;
+            GameObject spawnedEnemy = null;
             if (i == targetEnemyIndex) {
                 spawnedEnemy = GameObject.Instantiate(TargetEnemyPrefab, EnemySpawnLocations[i].position, Quaternion.identity);
             }
             else {
-                spawnedEnemy = GameObject.Instantiate(EnemyPrefab, EnemySpawnLocations[i].position, Quaternion.identity);
+            
+                int random = Random.Range(0, 100); 
+                int lowLim;    
+                int hiLim = 0;
+                for (int l_enemy = 0; l_enemy < EnemySpawns.Count; l_enemy++)
+                {
+                    lowLim = hiLim; 
+                    hiLim += EnemySpawns[l_enemy].spawnChance; 
+                    if (random >= lowLim && random < hiLim)
+                    { 
+                        spawnedEnemy = GameObject.Instantiate(EnemySpawns[l_enemy].Enemy, EnemySpawnLocations[i].position, Quaternion.identity);
+                    }
+                }
             }
             SpawnedEnemies.Add(spawnedEnemy);
 
