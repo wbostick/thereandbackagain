@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Gun : MonoBehaviour
 {
     public float fireCooldown = 0.0f;
@@ -21,7 +22,7 @@ public class Gun : MonoBehaviour
     {
         fireCooldown -= Time.deltaTime;
 
-        if (CanShoot() && Input.GetKeyDown("Shoot"))
+        if (CanShoot() && Input.GetButtonDown("Fire1"))
         {
             Shoot();
         }
