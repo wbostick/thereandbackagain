@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/GeorgeLab.unity
-    guid: bc0e261e57f1ecc4c9d2441d971cfb06
+    path: Assets/Scenes/PumpkinJamlevel.unity
+    guid: 7fdf292c8c64d52458b3b9408b65712c
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: e191d917f4318904582b02b3cf0a32fe,
       type: 2}

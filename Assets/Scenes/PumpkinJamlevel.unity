@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: 266dcb01801deb54980b56443161302e, type: 2}
 --- !u!1 &182964261
 GameObject:
   m_ObjectHideFlags: 0
@@ -377,7 +377,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1069891308
 Transform:
@@ -1064,13 +1064,13 @@ PrefabInstance:
         type: 3}
       propertyPath: EnemyPrefab
       value: 
-      objectReference: {fileID: 1444421046849777949, guid: b703e4881f8ecc649a6e3fdeeefd4ab2,
+      objectReference: {fileID: 8843715398980125347, guid: 0f0f9a7ce81a1854aac52ef6ba1e219e,
         type: 3}
     - target: {fileID: 5454775853640325496, guid: f660d1f3caab4fa4abdd4c2782e85d16,
         type: 3}
       propertyPath: TargetEnemyPrefab
       value: 
-      objectReference: {fileID: 1587423052673688941, guid: d96bd60a1b0d20a479d9a98baef4f30b,
+      objectReference: {fileID: 8744656618095051368, guid: 59c78a07cde10094498b97343c6470fb,
         type: 3}
     - target: {fileID: 5454775853640325497, guid: f660d1f3caab4fa4abdd4c2782e85d16,
         type: 3}

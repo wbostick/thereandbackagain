@@ -10,10 +10,10 @@ public class Health : MonoBehaviour
 
     public UnityEvent OnDeath;
 
-    void TakeDamage(float damage)
+    public void TakeDamage(float damage)
     {
         currentHealth -= damage;
-        
+        Debug.Log("Health: " + currentHealth);
         if (currentHealth <= 0.0f)
         {
             Die();
@@ -22,6 +22,7 @@ public class Health : MonoBehaviour
 
     void Die()
     {
+        Debug.Log("Die.");
         OnDeath.Invoke();
     }
 }
