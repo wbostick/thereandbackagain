@@ -30,7 +30,7 @@ public class GrapplingHook : MonoBehaviour
             startTime = Time.time;
             if (isPlayer) {
                 #if UNITY_ANDROID && !UNITY_EDITOR
-                    if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger, OVRInput.Controller.RTouch))
+                    if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger, OVRInput.Controller.LTouch))
                     {
                         Shoot();
                     }
@@ -64,7 +64,7 @@ public class GrapplingHook : MonoBehaviour
 
             particle.transform.LookAt(muzzleTransorm, Vector3.up);
 
-            StartCoroutine(MovePlayerAlongCurve(Hit.point, (GameManager.instance.Player.transform.position - Hit.point)));
+            StartCoroutine(MovePlayerAlongCurve(Hit.point, (Hit.point - GameManager.instance.Player.transform.position)));
 
 
             Debug.Log("Shoot: hit ", this);
@@ -75,7 +75,7 @@ public class GrapplingHook : MonoBehaviour
         
         GameManager.instance.DisablePlayerMovement();
         // Short delay added before Projectile is thrown
-        yield return new WaitForSeconds(1.5f);
+        //yield return new WaitForSeconds(1.5f);
 
         Transform Player = GameManager.instance.Player.transform;
 
@@ -94,9 +94,13 @@ public class GrapplingHook : MonoBehaviour
    
         // Rotate projectile to face the target.
         //Projectile.rotation = Quaternion.LookRotation(Target.position - Projectile.position);
+
+        Debug.Log("flight duration: " + flightDuration.ToString());
+        Debug.Log("(Vx, Vy): (" + Vx.ToString() + ", " + Vy.ToString() + ")");
        
         float elapse_time = 0;
  
+        
         while (elapse_time < flightDuration)
         {
             Player.Translate(0, (Vy - (gravity * elapse_time)) * Time.deltaTime, Vx * Time.deltaTime);
@@ -105,8 +109,9 @@ public class GrapplingHook : MonoBehaviour
  
             yield return null;
         }
+    
 
         GameManager.instance.EnablePlayerMovement();
-        StopCoroutine("MovePlayerAlongCurve");
+        yield return null;
     }
 }
