@@ -121,7 +121,7 @@ MonoBehaviour:
   m_AutoTargetPlayer: 1
   m_UpdateType: 0
   m_RotationRange: {x: 180, y: 180}
-  m_FollowSpeed: 20
+  m_FollowSpeed: 0.25
 --- !u!1 &8843715398980125347
 GameObject:
   m_ObjectHideFlags: 0
@@ -344,7 +344,7 @@ MonoBehaviour:
   m_AutoTargetPlayer: 1
   m_UpdateType: 0
   m_RotationRange: {x: 0, y: 360}
-  m_FollowSpeed: 3
+  m_FollowSpeed: 0.5
 --- !u!114 &7516334391667308763
 MonoBehaviour:
   m_ObjectHideFlags: 0
