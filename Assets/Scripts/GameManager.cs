@@ -5,27 +5,57 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+
     public GameObject Player;
+    public GameObject PCPlayerPrefab;
+    public GameObject VRPlayerPrefab;
+    public Transform playerStartPos;
 
     private void Awake() {
         instance = this;
-        Player = GameObject.FindWithTag("Player");
+        SpawnPlayer();
+        
     }
 
 
+    void SpawnPlayer() {
+        #if UNITY_ANDROID && !UNITY_EDITOR
+            Player = GameObject.Instantiate(VRPlayerPrefab, playerStartPos.position, playerStartPos.rotation);
+        #else
+            Player = GameObject.Instantiate(PCPlayerPrefab, playerStartPos.position, playerStartPos.rotation);
+        #endif
 
-    public void MovePlayer(Vector3 position, Vector3 rotation) {
-        StartCoroutine("DisablePlayerController");
+    }
+
+    public void MovePlayer(Vector3 position, Vector3 rotation, float disableTime) {
+        StartCoroutine("DisablePlayerController", disableTime);
         Player.transform.position = position;
-        Player.transform.rotation = Quaternion.Euler(rotation.x, rotation.y, rotation.z);
+        Player.transform.rotation = Quaternion.Euler(0f, rotation.y, 0f);
     }
 
     
-    IEnumerator DisablePlayerController() {
-        Player.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().enabled = false;
-        yield return new WaitForSeconds(0.1f);
-        Player.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().enabled = true;
+    IEnumerator DisablePlayerController(float time) {
+        DisablePlayerMovement();
+        yield return new WaitForSeconds(time);
+        EnablePlayerMovement();
     }
+
+    public void DisablePlayerMovement() {
+        #if UNITY_ANDROID && !UNITY_EDITOR
+            Player.GetComponent<OVRPlayerController>().enabled = false;
+        #else
+            Player.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().enabled = false;
+        #endif
+    }
+
+    public void EnablePlayerMovement() {
+        #if UNITY_ANDROID && !UNITY_EDITOR
+            Player.GetComponent<OVRPlayerController>().enabled = true;
+        #else
+            Player.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().enabled = true;
+        #endif
+    }
+
 
     // Update is called once per frame
     void Update()
