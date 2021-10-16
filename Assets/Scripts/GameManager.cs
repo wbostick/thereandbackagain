@@ -15,8 +15,7 @@ public class GameManager : MonoBehaviour
 
 
     public void MovePlayer(Vector3 position) {
-        Player.transform.position = position;
-
+        Player.GetComponent<CharacterController>().Move(position);
     }
 
     // Update is called once per frame
