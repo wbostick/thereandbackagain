@@ -47,4 +47,4 @@ MonoBehaviour:
     type: 3}
   TargetEnemyPrefab: {fileID: 8744656618095051368, guid: 59c78a07cde10094498b97343c6470fb,
     type: 3}
-  cooldown: 4
+  cooldown: 1

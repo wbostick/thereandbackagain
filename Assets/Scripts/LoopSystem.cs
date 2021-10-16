@@ -24,7 +24,8 @@ public class LoopSystem : MonoBehaviour
     public void EneteredPortal(GameObject portal) {
         if (Time.time - startTime > cooldown) {
             startTime = Time.time;
-            GameManager.instance.MovePlayer(portal.GetComponent<Door>().GetPartner().GetTeleportPoint());
+            Vector3 teleportPoint = portal.GetComponent<Door>().GetPartner().GetTeleportPoint();
+            GameManager.instance.MovePlayer(teleportPoint, (teleportPoint - portal.transform.position));
             
             ResetEnemies();
         }

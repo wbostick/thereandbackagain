@@ -188,8 +188,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.9999998, y: 1, z: 11.546907}
+  m_Center: {x: 0.0000009273101, y: -0.00000010498453, z: -5.273434}
 --- !u!1 &7305819244004139322
 GameObject:
   m_ObjectHideFlags: 0
@@ -202,7 +202,7 @@ GameObject:
   - component: {fileID: 7305819244004139301}
   - component: {fileID: 971361530868473142}
   - component: {fileID: 66829626508421501}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -24,4 +24,7 @@ public class AggroOnSight : MonoBehaviour
             }
         }
     }
+    public void ForceAggro() {
+        OnAggro.Invoke();
+    }
 }

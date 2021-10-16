@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//DNCST - header
+
 public class DestroySelf : MonoBehaviour
 {
     public void SelfDestruct()

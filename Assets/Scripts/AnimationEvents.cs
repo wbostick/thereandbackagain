@@ -1,13 +1,4 @@
-﻿// Allows for multiple events to be added to an object in an array and 
-// later called through other events,
-// Either by the listener's method name, or by the index in case multiple events
-// Are calling the same method
-// Was originally intended to be used for animation events, though I realize now
-// that it could potentially be used elsewhere
-
-//@George Castle
-
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;

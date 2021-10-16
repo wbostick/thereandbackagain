@@ -46,10 +46,11 @@ public class Gun : MonoBehaviour
     {
         OnShoot.Invoke();
         Debug.Log("Shoot: Shot was fired", this);
-        
+        int layerMask = LayerMask.NameToLayer("Triggers");
+        //layerMask = ~layerMask;
         Ray ray = new Ray(muzzleTransorm.position, muzzleTransorm.forward);
         RaycastHit Hit;
-        if (Physics.Raycast(ray, out Hit, Mathf.Infinity))
+        if (Physics.Raycast(ray, out Hit, Mathf.Infinity, layerMask))
         {
             
             GameObject particle = GameObject.Instantiate(HitEffectParticle, Hit.point, Quaternion.identity);
