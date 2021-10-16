@@ -49,7 +49,7 @@ public class Gun : MonoBehaviour
 
 
 
-    void Shoot()
+    virtual protected void Shoot()
     {
         OnShoot.Invoke();
         Debug.Log("Shoot: Shot was fired", this);
