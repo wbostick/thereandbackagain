@@ -4722,6 +4722,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5594377673911880212, guid: 42dd093bd4cd9d549aee03561592af15,
         type: 3}
+    - target: {fileID: 5454775853640325496, guid: f660d1f3caab4fa4abdd4c2782e85d16,
+        type: 3}
+      propertyPath: EnemySpawns.Array.data[0].spawnChance
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 5454775853640325496, guid: f660d1f3caab4fa4abdd4c2782e85d16,
+        type: 3}
+      propertyPath: EnemySpawns.Array.data[2].spawnChance
+      value: 65
+      objectReference: {fileID: 0}
     - target: {fileID: 5454775853640325497, guid: f660d1f3caab4fa4abdd4c2782e85d16,
         type: 3}
       propertyPath: m_Name
