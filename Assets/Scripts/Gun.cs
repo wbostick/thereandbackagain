@@ -6,12 +6,14 @@ using UnityEngine.Events;
 
 public class Gun : MonoBehaviour
 {
-    public float fireCooldown = 0.0f;
-
+    public float fireCooldown = 1.0f;
+    float startTime;
     [SerializeField] float damage;
+    [SerializeField] bool isPlayer;
     public Transform muzzleTransorm;
     public GameObject HitEffectParticle;
     public UnityEvent OnShoot;
+    
 
     void Start()
     {
@@ -19,28 +21,26 @@ public class Gun : MonoBehaviour
         {
             muzzleTransorm = gameObject.transform;
         }
+        startTime = Time.time;
     }
 
     void Update()
     {
-        fireCooldown -= Time.deltaTime;
-
-        if (CanShoot() && Input.GetButtonDown("Fire1"))
-        {
-            Shoot();
+        if (Time.time - startTime > fireCooldown) {
+            startTime = Time.time;
+            if (isPlayer) {
+                if (Input.GetButtonDown("Fire1"))
+                {
+                    Shoot();
+                }
+            }
+            else {
+                Shoot();
+            }
         }
-        
     }
 
-    bool CanShoot()
-    {
-        if (fireCooldown > 0.0f)
-        {
-            return false;
-        }
 
-        return true;
-    }
 
     void Shoot()
     {
@@ -57,9 +57,18 @@ public class Gun : MonoBehaviour
             particle.transform.LookAt(muzzleTransorm, Vector3.up);
 
             GameObject HitObject = Hit.collider.gameObject;
-            if (HitObject.tag == "Enemy") {
-                HitObject.GetComponent<Health>().TakeDamage(damage);
+
+            if (isPlayer) {
+                if (HitObject.tag == "Enemy") {
+                    HitObject.GetComponent<Health>().TakeDamage(damage);
+                }
             }
+            else {
+                if (HitObject.tag == "Player") {
+                    HitObject.GetComponent<Health>().TakeDamage(damage);
+                }
+            }
+
             Debug.Log("Shoot: hit ", this);
         }
     }
