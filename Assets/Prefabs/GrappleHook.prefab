@@ -319,7 +319,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9470322915615524f95a45e37ae5ee1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireCooldown: 0.2
+  fireCooldown: 2
   damage: 0
   isPlayer: 1
   muzzleTransorm: {fileID: 3586074962238431262}
