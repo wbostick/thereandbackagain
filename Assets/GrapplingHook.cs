@@ -13,6 +13,10 @@ public class GrapplingHook : Gun
     bool reset;
     Vector3 target;
 
+    GameObject HookEnd;
+
+    public UnityEvent OnGrappleEnd;
+
     override protected void Update()
     {
         /*
@@ -79,6 +83,8 @@ public class GrapplingHook : Gun
         }
         else if (!reset)
         {
+            OnGrappleEnd.Invoke();
+            Destroy(HookEnd);
             lastShotTimestamp = Time.time;
             reset = true;
             grappling = false;
@@ -98,9 +104,10 @@ public class GrapplingHook : Gun
         if (Physics.Raycast(ray, out Hit, Mathf.Infinity, layerMask))
         {
             
-            GameObject particle = GameObject.Instantiate(HitEffectParticle, Hit.point, Quaternion.identity);
+            HookEnd = GameObject.Instantiate(HitEffectParticle, Hit.point, Quaternion.identity);
+            HookEnd.GetComponent<GrappleLine>().GrapplingHookMuzzle = muzzleTransorm;
 
-            particle.transform.LookAt(muzzleTransorm, Vector3.up);
+            HookEnd.transform.LookAt(muzzleTransorm, Vector3.up);
 
             GameManager.instance.DisablePlayerMovement();
             

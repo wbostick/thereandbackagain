@@ -1615,11 +1615,16 @@ ParticleSystem:
     uvChannelMask: -1
     rowMode: 1
     sprites:
-    - sprite: {fileID: 21300000, guid: 11199433ccf55f343930ebda5d06f603, type: 3}
-    - sprite: {fileID: 21300000, guid: 354fc3fb2c928464c916ad82e7e35e53, type: 3}
-    - sprite: {fileID: 21300000, guid: ba0325f97a6f4b147a3c26f2ab410328, type: 3}
-    - sprite: {fileID: 21300000, guid: 3243cf6533aa3754db2bb211f726b143, type: 3}
-    - sprite: {fileID: 21300000, guid: 958ed2efc5e2a24429cb365a728c489c, type: 3}
+    - sprite: {fileID: 7791214535279931073, guid: 3a0734ca69a62034fa177002bd701e70,
+        type: 3}
+    - sprite: {fileID: -6084348050078671448, guid: 3a0734ca69a62034fa177002bd701e70,
+        type: 3}
+    - sprite: {fileID: 4258501782965630240, guid: 3a0734ca69a62034fa177002bd701e70,
+        type: 3}
+    - sprite: {fileID: -5257567865460593211, guid: 3a0734ca69a62034fa177002bd701e70,
+        type: 3}
+    - sprite: {fileID: -6961541962001274732, guid: 3a0734ca69a62034fa177002bd701e70,
+        type: 3}
     flipU: 0
     flipV: 0
   VelocityModule:
@@ -5846,6 +5851,11 @@ PrefabInstance:
       propertyPath: m_shootSound
       value: 
       objectReference: {fileID: 8300000, guid: bf378f8a8373d4f3596e9623146f81ba, type: 3}
+    - target: {fileID: 2436568176668272414, guid: 7d32deacb6b698f45ad56c9b0c5f16e3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2810343699511656006, guid: 7d32deacb6b698f45ad56c9b0c5f16e3,
         type: 3}
       propertyPath: m_Enabled

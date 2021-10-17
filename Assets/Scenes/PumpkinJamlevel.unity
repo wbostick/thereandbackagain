@@ -17,7 +17,7 @@ RenderSettings:
   m_Fog: 1
   m_FogColor: {r: 0, g: 0, b: 0, a: 1}
   m_FogMode: 3
-  m_FogDensity: 0.1
+  m_FogDensity: 0.03
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
@@ -628,6 +628,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Light (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 5644225213679423787, guid: 6f2e5e115ecfed144a9748e86f4e2e94,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e5e115ecfed144a9748e86f4e2e94, type: 3}
 --- !u!4 &312664704 stripped
@@ -886,6 +891,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Light (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5644225213679423787, guid: 6f2e5e115ecfed144a9748e86f4e2e94,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e5e115ecfed144a9748e86f4e2e94, type: 3}
@@ -2250,6 +2260,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Light (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5644225213679423787, guid: 6f2e5e115ecfed144a9748e86f4e2e94,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e5e115ecfed144a9748e86f4e2e94, type: 3}
@@ -3636,6 +3651,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Light (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5644225213679423787, guid: 6f2e5e115ecfed144a9748e86f4e2e94,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2e5e115ecfed144a9748e86f4e2e94, type: 3}
