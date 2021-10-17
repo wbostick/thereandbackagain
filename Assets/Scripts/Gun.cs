@@ -7,7 +7,7 @@ using UnityEngine.Events;
 public class Gun : MonoBehaviour
 {
     public float fireCooldown = 1.0f;
-    float startTime;
+    protected float lastShotTimestamp;
     public float damage;
     public bool isPlayer;
     public Transform muzzleTransorm;
@@ -15,19 +15,18 @@ public class Gun : MonoBehaviour
     public UnityEvent OnShoot;
     
 
-    void Start()
+    virtual protected void Start()
     {
         if (!muzzleTransorm)
         {
             muzzleTransorm = gameObject.transform;
         }
-        startTime = Time.time;
+        lastShotTimestamp = Time.time;
     }
 
-    void Update()
+    virtual protected void Update()
     {
-        if (Time.time - startTime > fireCooldown) {
-            startTime = Time.time;
+        if (Time.time - lastShotTimestamp > fireCooldown) {
             if (isPlayer) {
                 #if UNITY_ANDROID && !UNITY_EDITOR
                     if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger, OVRInput.Controller.RTouch))
@@ -49,7 +48,13 @@ public class Gun : MonoBehaviour
 
 
 
-    virtual protected void Shoot()
+    protected void Shoot()
+    {
+        lastShotTimestamp = Time.time;
+        Shoot_Implementation();
+    }
+
+    virtual protected void Shoot_Implementation()
     {
         OnShoot.Invoke();
         Debug.Log("Shoot: Shot was fired", this);

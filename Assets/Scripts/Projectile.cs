@@ -6,7 +6,7 @@ using UnityEngine.Events;
 [RequireComponent(typeof(Rigidbody))]
 public class Projectile : MonoBehaviour
 {
-    ProjectileGun gun;
+    public ProjectileGun gun;
     public float forwardSpeed;
     public UnityEvent OnImpact;
     protected Rigidbody rigid;
@@ -40,13 +40,11 @@ public class Projectile : MonoBehaviour
         GameObject hitObject = other.gameObject;
         if (gun.isPlayer) {
             if (hitObject.tag == "Enemy") {
-                hitObject.GetComponent<Health>().TakeDamage(gun.damage);
                 Debug.Log("Impact: hit enemy", this);
             }
         }
         else {
             if (hitObject.tag == "Player") {
-                hitObject.GetComponent<Health>().TakeDamage(gun.damage);
                 Debug.Log("Impact: hit Player", this);
             }
         }
