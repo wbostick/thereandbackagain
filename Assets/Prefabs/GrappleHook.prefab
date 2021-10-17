@@ -340,8 +340,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   Player: {fileID: 0}
-  speed: 20
-  targetRadius: 1
+  speed: 10
+  targetRadius: 2
   gravity: 0
 --- !u!1 &6899363362430959486
 GameObject:
