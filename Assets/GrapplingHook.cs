@@ -72,14 +72,17 @@ public class GrapplingHook : Gun
 
     void updateGrapple()
     {
-        if (Vector3.Distance(Player.transform.position, target) > targetRadius && GrappleInput())
+        if (GrappleInput())
         {
-            float targetDistance = Vector3.Distance(Player.transform.position, target);
-            Vector3 velocity = new Vector3((target.x - Player.transform.position.x) * (speed / targetDistance),
-                ((target.y - Player.transform.position.y) * (speed / targetDistance)) - gravity,
-                (target.z - Player.transform.position.z) * (speed / targetDistance));
-            Player.transform.Translate(velocity * Time.deltaTime, Space.World);
+            if (Vector3.Distance(Player.transform.position, target) > targetRadius)
+            {
+                float targetDistance = Vector3.Distance(Player.transform.position, target);
+                Vector3 velocity = new Vector3((target.x - Player.transform.position.x) * (speed / targetDistance),
+                    ((target.y - Player.transform.position.y) * (speed / targetDistance)) - gravity,
+                    (target.z - Player.transform.position.z) * (speed / targetDistance));
+                Player.transform.Translate(velocity * Time.deltaTime, Space.World);
 
+            }
         }
         else if (!reset)
         {
