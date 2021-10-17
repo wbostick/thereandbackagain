@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7666277053894541058
 Transform:
   m_ObjectHideFlags: 0
@@ -103,6 +103,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 900937106207172047, guid: 0f0f9a7ce81a1854aac52ef6ba1e219e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 970139666000463497, guid: 0f0f9a7ce81a1854aac52ef6ba1e219e,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.8926479
+      objectReference: {fileID: 0}
+    - target: {fileID: 984094473535343841, guid: 0f0f9a7ce81a1854aac52ef6ba1e219e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1059240888040246754, guid: 0f0f9a7ce81a1854aac52ef6ba1e219e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1416173750024120504, guid: 0f0f9a7ce81a1854aac52ef6ba1e219e,
         type: 3}
       propertyPath: m_RootOrder
@@ -158,15 +178,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2278706741522074252, guid: 0f0f9a7ce81a1854aac52ef6ba1e219e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6647479653818864592, guid: 0f0f9a7ce81a1854aac52ef6ba1e219e,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 7719274aae17b5649b3308ea44b6db2e, type: 2}
+    - target: {fileID: 6689416334361692111, guid: 0f0f9a7ce81a1854aac52ef6ba1e219e,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.8926479
+      objectReference: {fileID: 0}
     - target: {fileID: 6710041538844953045, guid: 0f0f9a7ce81a1854aac52ef6ba1e219e,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8099183442881367218, guid: 0f0f9a7ce81a1854aac52ef6ba1e219e,
         type: 3}
