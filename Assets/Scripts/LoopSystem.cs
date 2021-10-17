@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class LoopSystem : MonoBehaviour
 {
@@ -18,6 +19,12 @@ public class LoopSystem : MonoBehaviour
 
     [SerializeField] float cooldown = 4f;
     float startTime;
+
+    [SerializeField] int targetEnemiesToCountReached = 5;
+    int targetEnemiesKilled = 0;
+
+    public UnityEvent onTargetEnemiesCountReached;
+
     private void Awake() {
         instance = this;
         foreach (Transform child in transform) {
@@ -50,6 +57,7 @@ public class LoopSystem : MonoBehaviour
             GameObject spawnedEnemy = null;
             if (i == targetEnemyIndex) {
                 spawnedEnemy = GameObject.Instantiate(TargetEnemyPrefab, EnemySpawnLocations[i].position, Quaternion.identity);
+                spawnedEnemy.GetComponent<Health>().OnDeath.AddListener(targetEnemyDeath);
             }
             else {
             
@@ -70,6 +78,15 @@ public class LoopSystem : MonoBehaviour
 
         }
 
+    }
+
+    void targetEnemyDeath()
+    {
+        targetEnemiesKilled++;
+        if (targetEnemiesToCountReached == targetEnemiesKilled)
+        {
+            onTargetEnemiesCountReached.Invoke();
+        }
     }
 
 
