@@ -320,7 +320,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireCooldown: 0.2
-  gravity: 9.8
+  damage: 0
   isPlayer: 1
   muzzleTransorm: {fileID: 3586074962238431262}
   HitEffectParticle: {fileID: 100002, guid: 99c73c92ac40473459640b165473206f, type: 3}
@@ -339,6 +339,10 @@ MonoBehaviour:
           m_StringArgument: Shoot
           m_BoolArgument: 0
         m_CallState: 2
+  Player: {fileID: 0}
+  speed: 20
+  targetRadius: 1
+  gravity: 0
 --- !u!1 &6899363362430959486
 GameObject:
   m_ObjectHideFlags: 0
