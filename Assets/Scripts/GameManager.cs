@@ -46,6 +46,9 @@ public class GameManager : MonoBehaviour
         #else
             Player.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().enabled = false;
         #endif
+        Player.GetComponent<Rigidbody>().isKinematic = false;
+        Player.GetComponent<CharacterController>().enabled = false;
+            
     }
 
     public void EnablePlayerMovement() {
@@ -54,6 +57,8 @@ public class GameManager : MonoBehaviour
         #else
             Player.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().enabled = true;
         #endif
+        Player.GetComponent<Rigidbody>().isKinematic = true;
+                Player.GetComponent<CharacterController>().enabled = true;
     }
 
 
