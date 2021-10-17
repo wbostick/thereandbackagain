@@ -51,7 +51,7 @@ public class GrapplingHook : Gun
         if (isPlayer)
         {
             #if UNITY_ANDROID && !UNITY_EDITOR
-                if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger, OVRInput.Controller.LTouch))
+                if (OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger, OVRInput.Controller.LTouch))
                 {
                     return true;
                 }
