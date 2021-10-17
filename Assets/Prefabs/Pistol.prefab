@@ -247,7 +247,7 @@ MonoBehaviour:
   isPlayer: 1
   muzzleTransorm: {fileID: 3586074962238431262}
   HitEffectParticle: {fileID: 100002, guid: 99c73c92ac40473459640b165473206f, type: 3}
-  EnemyHitEffectParticle: {fileID: 6859903533269286590, guid: bc207395c501ce6448aa65c5d8ad9577,
+  EnemyHitEffectParticle: {fileID: 5410517712272938463, guid: 83ff3ceb33deefb40a61f88cff02d31e,
     type: 3}
   OnShoot:
     m_PersistentCalls:

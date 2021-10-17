@@ -27,8 +27,8 @@ public class HealthUIPostProcessing : MonoBehaviour
     public void setHealthAmmount(float currentHealth) {
         channels.redOutRedIn.value = ((200 * (200 - currentHealth)) / 200);
         
-        channels.redOutGreenIn.value = ((200 * (200 - currentHealth)) / 200);
+        channels.redOutGreenIn.value = ((200 * (200 - currentHealth)) / 200) - 100;
         
-        channels.redOutBlueIn.value = ((200 * (200 - currentHealth)) / 200);
+        channels.redOutBlueIn.value = ((200 * (200 - currentHealth)) / 200) - 100;
     }
 }
