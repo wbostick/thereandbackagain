@@ -33,6 +33,9 @@ public class ProjectileEnemyController : MonoBehaviour
     public UnityEvent OnScare;
     public UnityEvent OnEndScare;
 
+    private AudioSource audioSource;
+    [SerializeField] private AudioClip m_idleSound;
+
     private void Awake()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
@@ -47,6 +50,7 @@ public class ProjectileEnemyController : MonoBehaviour
     void Start()
     {
         target = GameManager.instance.Player.transform;
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()

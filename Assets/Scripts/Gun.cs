@@ -15,7 +15,6 @@ public class Gun : MonoBehaviour
     public GameObject EnemyHitEffectParticle;
     public UnityEvent OnShoot;
     public GameObject Player;
-    
 
     virtual protected void Start()
     {

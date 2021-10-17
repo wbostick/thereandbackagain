@@ -29,6 +29,8 @@ MonoBehaviour:
           m_StringArgument: PumpkinJamlevel
           m_BoolArgument: 0
         m_CallState: 2
+  m_DamageSound: {fileID: 8300000, guid: f55ece2e73b074aab89c1e8d343c8060, type: 3}
+  m_DeathSound: {fileID: 8300000, guid: f55ece2e73b074aab89c1e8d343c8060, type: 3}
   OnDamage:
     m_PersistentCalls:
       m_Calls:

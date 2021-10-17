@@ -9,9 +9,13 @@ public class HitscanEnemyController : MonoBehaviour
     public Transform target;
     protected NavMeshAgent navMeshAgent;
 
+    private AudioSource audioSource;
+    [SerializeField] private AudioClip m_idleSound;
+
     private void Awake()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Start()
@@ -22,5 +26,10 @@ public class HitscanEnemyController : MonoBehaviour
     void Update()
     {
         navMeshAgent.SetDestination(target.position);
+        if (!audioSource.isPlaying)
+        {
+            audioSource.clip = m_idleSound;
+            audioSource.Play();
+        }
     }
 }
