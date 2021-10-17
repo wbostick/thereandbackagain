@@ -48,7 +48,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1f7f1e07b5c61048a5dd67c0e3581e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pips: []
+  pips:
+  - {fileID: 410186440130240463}
+  - {fileID: 4102977745749109207}
+  - {fileID: 6107105883966484179}
+  - {fileID: 6155331312887135480}
+  - {fileID: 8136454593057842781}
   OnTargetKilled:
     m_PersistentCalls:
       m_Calls: []
