@@ -31,7 +31,19 @@ MonoBehaviour:
         m_CallState: 2
   OnDamage:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5737521222285548275}
+        m_TargetAssemblyTypeName: HealthUIPostProcessing, Assembly-CSharp
+        m_MethodName: setHealthAmmount
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1154209294316471745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42,6 +54,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b1d8a9c11fa185242b56c749827936c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5737521222285548275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5070618482923421131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3a922b4fbf96d64fada98901fd704fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &4847891994082756588
