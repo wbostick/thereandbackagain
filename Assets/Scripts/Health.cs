@@ -12,7 +12,6 @@ public class Health : MonoBehaviour
 
     [SerializeField] private AudioClip m_DamageSound;
     [SerializeField] private AudioClip m_DeathSound;
-    private AudioSource m_AudioSource;
 
     [System.Serializable]
     public class FloatEvent : UnityEvent<float> {
@@ -24,7 +23,6 @@ public class Health : MonoBehaviour
 
     private void Start()
     {
-        m_AudioSource = GetComponent<AudioSource>();
     }
 
     public void Heal()
@@ -45,8 +43,7 @@ public class Health : MonoBehaviour
         }
         else
         {
-            m_AudioSource.clip = m_DamageSound;
-            m_AudioSource.Play();
+            AudioSource.PlayClipAtPoint(m_DamageSound, transform.position);
         }
     }
 

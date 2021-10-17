@@ -209,6 +209,11 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 4169961736797867494, guid: 0f0f9a7ce81a1854aac52ef6ba1e219e,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.265
+      objectReference: {fileID: 0}
     - target: {fileID: 6647479653818864592, guid: 0f0f9a7ce81a1854aac52ef6ba1e219e,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
