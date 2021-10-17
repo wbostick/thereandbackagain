@@ -9,12 +9,19 @@ public class Health : MonoBehaviour
     public float maxHealth = 100;
 
     public UnityEvent OnDeath;
-    public UnityEvent OnDamage;
+
+    [System.Serializable]
+    public class FloatEvent : UnityEvent<float> {
+
+    }
+
+    public FloatEvent OnDamage;
 
     public void TakeDamage(float damage)
     {
-        OnDamage.Invoke();
+        
         currentHealth -= damage;
+        OnDamage.Invoke(currentHealth);
         Debug.Log("Health: " + currentHealth);
         if (currentHealth <= 0.0f)
         {
