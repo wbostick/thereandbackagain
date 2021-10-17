@@ -178,6 +178,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3364060865309704613, guid: 0f0f9a7ce81a1854aac52ef6ba1e219e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6647479653818864592, guid: 0f0f9a7ce81a1854aac52ef6ba1e219e,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -193,6 +198,11 @@ PrefabInstance:
       propertyPath: OnAggro.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
       objectReference: {fileID: 4810039493528261977}
+    - target: {fileID: 7694262102050638965, guid: 0f0f9a7ce81a1854aac52ef6ba1e219e,
+        type: 3}
+      propertyPath: ShapeModule.m_MeshRenderer
+      value: 
+      objectReference: {fileID: 5919015503264022085}
     - target: {fileID: 8175163815513201413, guid: 0f0f9a7ce81a1854aac52ef6ba1e219e,
         type: 3}
       propertyPath: m_IsActive
@@ -235,3 +245,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7d9501815181da48a2e950e26034a21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!23 &5919015503264022085 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 7294874457866041074, guid: 0f0f9a7ce81a1854aac52ef6ba1e219e,
+    type: 3}
+  m_PrefabInstance: {fileID: 3969932512036653239}
+  m_PrefabAsset: {fileID: 0}

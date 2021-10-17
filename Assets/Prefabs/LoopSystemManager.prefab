@@ -46,10 +46,10 @@ MonoBehaviour:
   EnemySpawns:
   - Enemy: {fileID: 8843715398980125347, guid: 0f0f9a7ce81a1854aac52ef6ba1e219e, type: 3}
     spawnChance: 60
-  - Enemy: {fileID: 5594377673911880212, guid: 42dd093bd4cd9d549aee03561592af15, type: 3}
-    spawnChance: 50
   - Enemy: {fileID: 5981397283839597819, guid: 5e0bb17c26ff5ad4083db80b4fe8c377, type: 3}
     spawnChance: 55
+  - Enemy: {fileID: 5594377673911880212, guid: 42dd093bd4cd9d549aee03561592af15, type: 3}
+    spawnChance: 50
   TargetEnemyPrefab: {fileID: 8744656618095051368, guid: 59c78a07cde10094498b97343c6470fb,
     type: 3}
   cooldown: 1
