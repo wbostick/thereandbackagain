@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
     public void MovePlayer(Vector3 position, Vector3 rotation, float disableTime) {
         StartCoroutine("DisablePlayerController", disableTime);
         Player.transform.position = position;
-        Player.transform.rotation = Quaternion.Euler(0f, rotation.y, 0f);
+        Player.transform.rotation = Quaternion.Euler(0f, rotation.y - 90, 0f);
     }
 
     

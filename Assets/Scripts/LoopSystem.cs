@@ -38,8 +38,10 @@ public class LoopSystem : MonoBehaviour
         if (Time.time - startTime > cooldown) {
             startTime = Time.time;
             Vector3 teleportPoint = portal.GetComponent<Door>().GetPartner().GetTeleportPoint();
-            GameManager.instance.MovePlayer(teleportPoint, (teleportPoint - portal.transform.position), 0.1f);
-            
+            GameManager.instance.MovePlayer(teleportPoint, portal.GetComponent<Door>().transform.rotation.eulerAngles, 0.1f);
+
+
+
             ResetEnemies();
         }
     }
