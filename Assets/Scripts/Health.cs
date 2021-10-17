@@ -19,11 +19,18 @@ public class Health : MonoBehaviour
 
     }
 
+    public FloatEvent OnHeal;
     public FloatEvent OnDamage;
 
     private void Start()
     {
         m_AudioSource = GetComponent<AudioSource>();
+    }
+
+    public void Heal()
+    {
+        currentHealth = maxHealth;
+        OnHeal.Invoke(currentHealth);
     }
 
     public void TakeDamage(float damage)
