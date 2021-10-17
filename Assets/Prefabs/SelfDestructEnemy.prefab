@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2027799553162632186}
   - component: {fileID: 2627670347904549640}
   - component: {fileID: 327883798455160438}
+  - component: {fileID: 8081172315247952118}
   m_Layer: 19
   m_Name: ExplosionRadius
   m_TagString: Untagged
@@ -73,6 +74,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8081172315247952118}
+        m_TargetAssemblyTypeName: SpawnOnPosition, Assembly-CSharp
+        m_MethodName: Spawn
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2647916554407354383}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 5847244361833468909}
         m_TargetAssemblyTypeName: DestroySelf, Assembly-CSharp
         m_MethodName: SelfDestruct
@@ -105,7 +118,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 794372713313b5f43952d9b2a535ddc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 30
+  damageAmount: 50
+--- !u!114 &8081172315247952118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4563990126202401833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8072edb40b125d247b89410303fcb343, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawn: {fileID: 7093627768654912606, guid: b746ac7aefbf8e54da246d0ab46a2627, type: 3}
 --- !u!1001 &3969932512036653239
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -116,7 +142,7 @@ PrefabInstance:
     - target: {fileID: 904479333204816617, guid: 0f0f9a7ce81a1854aac52ef6ba1e219e,
         type: 3}
       propertyPath: m_Speed
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 904479333204816617, guid: 0f0f9a7ce81a1854aac52ef6ba1e219e,
         type: 3}

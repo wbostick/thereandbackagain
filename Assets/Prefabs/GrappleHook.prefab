@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4488128858257089773}
   - component: {fileID: 4075762189428169508}
   - component: {fileID: 513936119078904488}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5427412655268266054}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -143,7 +143,7 @@ GameObject:
   - component: {fileID: 5901996801673599379}
   - component: {fileID: 4917035658397084217}
   - component: {fileID: 2810343699511656006}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -493,7 +493,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4484165671084738186}
   - component: {fileID: 6280782673291470404}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: MuzzleFlash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -577,7 +577,7 @@ GameObject:
   - component: {fileID: 5362614500278253978}
   - component: {fileID: 1978999713133956816}
   - component: {fileID: 7721364707081389533}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -727,6 +727,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: HeadPieceAsset
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5969850c7f834864db2ebaffb15c6085,
+        type: 3}
+      propertyPath: m_Layer
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 1869004960016252962, guid: 5969850c7f834864db2ebaffb15c6085,
+        type: 3}
+      propertyPath: m_Layer
+      value: 18
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5969850c7f834864db2ebaffb15c6085, type: 3}
 --- !u!1 &3346731781477173518 stripped
@@ -807,6 +817,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: model
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 94f2fbb12099016479ca98104032aa29,
+        type: 3}
+      propertyPath: m_Layer
+      value: 18
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94f2fbb12099016479ca98104032aa29, type: 3}

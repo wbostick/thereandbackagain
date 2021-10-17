@@ -23,6 +23,7 @@ public class LoopSystem : MonoBehaviour
     [SerializeField] int targetEnemiesToCountReached = 5;
     int targetEnemiesKilled = 0;
 
+    public UnityEvent OnTargetEnemyKilled;
     public UnityEvent onTargetEnemiesCountReached;
 
     private void Awake() {
@@ -89,6 +90,7 @@ public class LoopSystem : MonoBehaviour
 
     void targetEnemyDeath()
     {
+        OnTargetEnemyKilled.Invoke();
         targetEnemiesKilled++;
         if (targetEnemiesToCountReached == targetEnemiesKilled)
         {
