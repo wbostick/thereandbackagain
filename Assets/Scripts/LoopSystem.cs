@@ -40,10 +40,15 @@ public class LoopSystem : MonoBehaviour
             Vector3 teleportPoint = portal.GetComponent<Door>().GetPartner().GetTeleportPoint();
             GameManager.instance.MovePlayer(teleportPoint, portal.GetComponent<Door>().transform.rotation.eulerAngles, 0.1f);
 
-
+            HealPlayer();
 
             ResetEnemies();
         }
+    }
+
+    void HealPlayer()
+    {
+        GameManager.instance.Player.GetComponent<Health>().Heal();
     }
 
     void ResetEnemies() {

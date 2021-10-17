@@ -7,6 +7,9 @@ using UnityEngine.AI;
 public class HitscanEnemyController : MonoBehaviour
 {
     public Transform target;
+    public float shotRange = 6.0f;
+    // how close they try to get to you
+    public float followDistance = 2.0f;
     protected NavMeshAgent navMeshAgent;
 
     private AudioSource audioSource;
@@ -25,7 +28,20 @@ public class HitscanEnemyController : MonoBehaviour
 
     void Update()
     {
-        navMeshAgent.SetDestination(target.position);
+        Vector3 currentOffset = transform.position - target.position;
+        Vector3 desiredOffset = currentOffset.normalized * followDistance;
+
+        navMeshAgent.SetDestination(target.position + desiredOffset);
+
+        if (Vector3.Distance(target.transform.position, transform.position) < shotRange)
+        {
+            GetComponentInChildren<Gun>().enabled = true;
+        }
+        else
+        {
+            GetComponentInChildren<Gun>().enabled = false;
+        }
+
         if (!audioSource.isPlaying)
         {
             audioSource.clip = m_idleSound;

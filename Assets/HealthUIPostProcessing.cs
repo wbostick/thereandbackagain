@@ -5,6 +5,7 @@ using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 
 
+[RequireComponent(typeof(Health))]
 public class HealthUIPostProcessing : MonoBehaviour
 {
     Volume volume;
@@ -15,11 +16,13 @@ public class HealthUIPostProcessing : MonoBehaviour
         if(volume.profile.TryGet<ChannelMixer>(out channels)) {
             channels.redOutRedIn.value = 100f;
         }
+
+        Health health = GetComponent<Health>();
+        setHealthAmmount(health.currentHealth);
+
+        health.OnDamage.AddListener(setHealthAmmount);
+        health.OnHeal.AddListener(setHealthAmmount);
     }
-    
-
-
-
 
     public void setHealthAmmount(float currentHealth) {
         channels.redOutRedIn.value = ((200 * (200 - currentHealth)) / 200);
