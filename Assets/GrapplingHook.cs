@@ -88,7 +88,13 @@ public class GrapplingHook : Gun
             lastShotTimestamp = Time.time;
             reset = true;
             grappling = false;
-            Player.GetComponent<Rigidbody>().useGravity = true;
+
+            Rigidbody playerRigid = Player.GetComponent<Rigidbody>();
+            if (playerRigid)
+            {
+                playerRigid.useGravity = true;
+            }
+
             GameManager.instance.EnablePlayerMovement();
         }
     }
@@ -115,7 +121,12 @@ public class GrapplingHook : Gun
 
             grappling = true;
             reset = false;
-            Player.GetComponent<Rigidbody>().useGravity = false;
+
+            Rigidbody playerRigid = Player.GetComponent<Rigidbody>();
+            if (playerRigid)
+            {
+                playerRigid.useGravity = false;
+            }
 
             Debug.Log("Shoot: hit ", this);
         }
