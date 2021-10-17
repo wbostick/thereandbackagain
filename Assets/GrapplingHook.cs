@@ -6,8 +6,6 @@ using UnityEngine.Events;
 
 public class GrapplingHook : Gun
 {
-    float startTime;
-
     [SerializeField] float speed = 10f;
     [SerializeField] float targetRadius = 10f;
     public float gravity = 9.8f;
@@ -17,6 +15,7 @@ public class GrapplingHook : Gun
 
     override protected void Update()
     {
+        /*
         if (Time.time - startTime > fireCooldown) {
             startTime = Time.time;
             if (isPlayer) {
@@ -35,17 +34,41 @@ public class GrapplingHook : Gun
             else {
                 Shoot();
             }
-        }
+        }*/
 
         if (grappling) {
             updateGrapple();
         }
+        else if (((Time.time - lastShotTimestamp) > fireCooldown) && GrappleInput()){
+            Debug.Log("Entered Shoot " + (Time.time - lastShotTimestamp) + "," + fireCooldown);
+            Shoot();
+        }
         
+    }
+
+    bool GrappleInput()
+    {
+        if (isPlayer)
+        {
+            #if UNITY_ANDROID && !UNITY_EDITOR
+                if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger, OVRInput.Controller.LTouch))
+                {
+                    return true;
+                }
+            #else
+                if (Input.GetButton("Fire1"))
+                {
+                    return true;
+                }
+            #endif
+            return false;
+        }
+        return true;
     }
 
     void updateGrapple()
     {
-        if (Vector3.Distance(Player.transform.position, target) > targetRadius)
+        if (Vector3.Distance(Player.transform.position, target) > targetRadius && GrappleInput())
         {
             float targetDistance = Vector3.Distance(Player.transform.position, target);
             Vector3 velocity = new Vector3((target.x - Player.transform.position.x) * (speed / targetDistance),
@@ -56,6 +79,7 @@ public class GrapplingHook : Gun
         }
         else if (!reset)
         {
+            lastShotTimestamp = Time.time;
             reset = true;
             grappling = false;
             Player.GetComponent<Rigidbody>().useGravity = true;

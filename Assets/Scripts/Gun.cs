@@ -32,7 +32,7 @@ public class Gun : MonoBehaviour
         if (Time.time - lastShotTimestamp > fireCooldown) {
             if (isPlayer) {
                 #if UNITY_ANDROID && !UNITY_EDITOR
-                    if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger, OVRInput.Controller.RTouch))
+                    if (OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger, OVRInput.Controller.RTouch))
                     {
                         Shoot();
                     }
