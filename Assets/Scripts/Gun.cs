@@ -13,6 +13,7 @@ public class Gun : MonoBehaviour
     public Transform muzzleTransorm;
     public GameObject HitEffectParticle;
     public UnityEvent OnShoot;
+    public GameObject Player;
     
 
     virtual protected void Start()
@@ -22,6 +23,7 @@ public class Gun : MonoBehaviour
             muzzleTransorm = gameObject.transform;
         }
         lastShotTimestamp = Time.time;
+        Player = GameManager.instance.Player;
     }
 
     virtual protected void Update()
