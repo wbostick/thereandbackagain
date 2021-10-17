@@ -58,6 +58,7 @@ public class GrapplingHook : Gun
         {
             reset = true;
             grappling = false;
+            Player.GetComponent<Rigidbody>().useGravity = true;
             GameManager.instance.EnablePlayerMovement();
         }
     }
@@ -83,6 +84,7 @@ public class GrapplingHook : Gun
 
             grappling = true;
             reset = false;
+            Player.GetComponent<Rigidbody>().useGravity = false;
 
             Debug.Log("Shoot: hit ", this);
         }
