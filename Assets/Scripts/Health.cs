@@ -54,7 +54,6 @@ public class Health : MonoBehaviour
     {
         Debug.Log("Die.");
         OnDeath.Invoke();
-        m_AudioSource.clip = m_DeathSound;
-        m_AudioSource.Play();
+        AudioSource.PlayClipAtPoint(m_DeathSound, transform.position);
     }
 }
