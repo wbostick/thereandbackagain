@@ -544,6 +544,7 @@ MonoBehaviour:
   OnEndScare:
     m_PersistentCalls:
       m_Calls: []
+  m_idleSound: {fileID: 0}
 --- !u!82 &821816886545694225
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5794,6 +5795,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6214917576882415943, guid: e999b4d6b4601ab4ca15f8ec12e07f7d,
         type: 3}
+      propertyPath: damage
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6214917576882415943, guid: e999b4d6b4601ab4ca15f8ec12e07f7d,
+        type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
@@ -5815,7 +5821,7 @@ PrefabInstance:
     - target: {fileID: 8792427068879599502, guid: e999b4d6b4601ab4ca15f8ec12e07f7d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.126
+      value: 0.899
       objectReference: {fileID: 0}
     - target: {fileID: 8792427068879599502, guid: e999b4d6b4601ab4ca15f8ec12e07f7d,
         type: 3}

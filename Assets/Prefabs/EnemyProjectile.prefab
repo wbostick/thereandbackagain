@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1576742781710619108}
   - component: {fileID: 2896293633018203212}
   - component: {fileID: 6889366361200479591}
+  - component: {fileID: 6945868761069027225}
   m_Layer: 19
   m_Name: EnemyProjectile
   m_TagString: Untagged
@@ -64,14 +65,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gun: {fileID: 0}
-  forwardSpeed: 56.92
+  forwardSpeed: 0
   OnImpact:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2896293633018203212}
         m_TargetAssemblyTypeName: DestroySelf, Assembly-CSharp
-        m_MethodName: SelfDestruct
+        m_MethodName: SelfDestructAfter
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 1
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6945868761069027225}
+        m_TargetAssemblyTypeName: DamageRadius, Assembly-CSharp
+        m_MethodName: DamageEnemiesInRadius
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 681966905359381445}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -106,6 +131,21 @@ CapsuleCollider:
   m_Height: 1.26
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: -0.07}
+--- !u!114 &6945868761069027225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 681966905359381445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e01a2194793fec4c99fc56faae2b665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 3
+  ignoreTags:
+  - Enemy
 --- !u!1 &1899672555263159042
 GameObject:
   m_ObjectHideFlags: 0
