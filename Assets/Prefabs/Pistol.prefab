@@ -343,6 +343,8 @@ MonoBehaviour:
   isPlayer: 1
   muzzleTransorm: {fileID: 3586074962238431262}
   HitEffectParticle: {fileID: 100002, guid: 99c73c92ac40473459640b165473206f, type: 3}
+  EnemyHitEffectParticle: {fileID: 6859903533269286590, guid: bc207395c501ce6448aa65c5d8ad9577,
+    type: 3}
   OnShoot:
     m_PersistentCalls:
       m_Calls:
@@ -358,6 +360,7 @@ MonoBehaviour:
           m_StringArgument: Shoot
           m_BoolArgument: 0
         m_CallState: 2
+  Player: {fileID: 0}
 --- !u!95 &8789692594081674346
 Animator:
   serializedVersion: 3

@@ -12,6 +12,7 @@ public class Gun : MonoBehaviour
     public bool isPlayer;
     public Transform muzzleTransorm;
     public GameObject HitEffectParticle;
+    public GameObject EnemyHitEffectParticle;
     public UnityEvent OnShoot;
     public GameObject Player;
     
@@ -66,12 +67,18 @@ public class Gun : MonoBehaviour
         RaycastHit Hit;
         if (Physics.Raycast(ray, out Hit, Mathf.Infinity, layerMask))
         {
-            
-            GameObject particle = GameObject.Instantiate(HitEffectParticle, Hit.point, Quaternion.identity);
+            GameObject HitObject = Hit.collider.gameObject;
+            GameObject particle = null;
+            if (HitObject.tag != "Enemy") {
+                particle = GameObject.Instantiate(HitEffectParticle, Hit.point, Quaternion.identity);
+            }
+            else {
+                particle = GameObject.Instantiate(EnemyHitEffectParticle, Hit.point, Quaternion.identity);
+            }
 
             particle.transform.LookAt(muzzleTransorm, Vector3.up);
 
-            GameObject HitObject = Hit.collider.gameObject;
+            
 
             if (isPlayer) {
                 if (HitObject.tag == "Enemy") {
