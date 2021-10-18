@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7514835284110146814}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7587615128965158375}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: RopeEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ GameObject:
   - component: {fileID: 7471157687195319068}
   - component: {fileID: 4084834409544540183}
   - component: {fileID: 1487680279927729951}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: GrappleLine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -219,7 +219,7 @@ GameObject:
   - component: {fileID: 5995277273330194409}
   - component: {fileID: 3515440946511130135}
   - component: {fileID: 4243336548355002418}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: pCylinder7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
