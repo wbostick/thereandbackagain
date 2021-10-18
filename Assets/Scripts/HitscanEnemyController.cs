@@ -15,6 +15,8 @@ public class HitscanEnemyController : MonoBehaviour
     private AudioSource audioSource;
     [SerializeField] private AudioClip m_idleSound;
 
+    Gun m_Gun;
+
     private void Awake()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
@@ -24,6 +26,7 @@ public class HitscanEnemyController : MonoBehaviour
     void Start()
     {
         target = GameManager.instance.Player.transform; 
+        m_Gun = GetComponentInChildren<Gun>();
     }
 
     void Update()
@@ -33,13 +36,16 @@ public class HitscanEnemyController : MonoBehaviour
 
         navMeshAgent.SetDestination(target.position + desiredOffset);
 
-        if (Vector3.Distance(target.transform.position, transform.position) < shotRange)
+        
+        
+
+        if (Vector3.Distance(target.transform.position, transform.position) < shotRange && m_Gun)
         {
-            GetComponentInChildren<Gun>().enabled = true;
+            m_Gun.enabled = true;
         }
-        else
+        else if (m_Gun)
         {
-            GetComponentInChildren<Gun>().enabled = false;
+            m_Gun.enabled = false;
         }
 
         if (!audioSource.isPlaying)

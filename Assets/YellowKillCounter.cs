@@ -8,6 +8,8 @@ public class YellowKillCounter : MonoBehaviour
     [SerializeField] List<SpriteRenderer> pips = new List<SpriteRenderer>();
     int count = 0;
     public UnityEvent OnTargetKilled;
+
+    public UnityEvent OnWin;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +21,9 @@ public class YellowKillCounter : MonoBehaviour
         OnTargetKilled.Invoke();
         pips[count].color =  new Color(255, 206, 0);
         count++;
+        if (count == 3) {
+            OnWin.Invoke();
+        }
     }
 
 }
